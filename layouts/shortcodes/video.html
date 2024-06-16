@@ -1,0 +1,5 @@
+{{ with .Get "src" }}
+<video src="{{ . }}" controls></video>
+{{ else }}
+{{ errorf "The %q shortcode requires a 'src' argument. See %s" .Name .Position }}
+{{ end }}
